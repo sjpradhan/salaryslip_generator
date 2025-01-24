@@ -3,6 +3,13 @@ import zipfile
 import streamlit as st
 from salary_slip import generate_salary_slip
 
+# Set the page config, including the title and favicon
+st.set_page_config(
+    page_title="Salary Slip Generator 📑",  # This is the title of your app in the browser tab
+    page_icon="https://raw.githubusercontent.com/sjpradhan/salaryslip_generator/master/Bankbencher%20logo.png",  # URL of your icon (or local file)
+    layout="centered",  # Optional: This controls the layout style (can be "centered" or "wide")
+)
+
 # Title of the web app
 st.title('Salary Slip Generator')
 
