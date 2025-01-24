@@ -11,10 +11,10 @@ uploaded_file = st.file_uploader("Upload Excel File", type=["xlsx", "xls"])
 
 if uploaded_file is not None:
     # Allow user to upload logo (optional)
-    logo_path = "https://github.com/sjpradhan/salaryslip_generator/blob/master/Bankbencher%20logo.png"
+    logo_path = "https://raw.githubusercontent.com/sjpradhan/salaryslip_generator/master/Bankbencher%20logo.png"
 
     # Temporary directory to store the generated PDFs
-    output_dir = "static/"
+    output_dir = os.path.abspath("static/")
 
     # Process the file when uploaded
     if st.button("Generate Salary Slips"):

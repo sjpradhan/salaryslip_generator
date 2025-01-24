@@ -76,13 +76,14 @@ def generate_single_pdf(row, logo_path, output_dir):
     gross_deduction = format_number(row['Gross Deduction'])
     net_salary_payable = format_number(row['Net Salary Payable (In Rs)'])
 
+    # Define Font Style
     normal_font_style = "Helvetica"
     bold_font_style = "Helvetica-Bold"
 
     # Add title
     c.setFont(normal_font_style, 16)
     c.setStrokeColor(colors.black)  # Set border color
-    c.drawString(50, height - 85, f"PAYSLIP " + str((month_year)))
+    c.drawString(50, height - 85, f"PAYSLIP " + str(month_year))
 
     # Add Address
     c.setFont(normal_font_style, 11)
